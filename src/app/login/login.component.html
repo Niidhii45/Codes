@@ -1,0 +1,41 @@
+<mat-card class="card">
+<form [formGroup]="userLogin" (ngSubmit)="OnSubmit()">
+    <h3>REGESTER HERE</h3>
+    <br>
+        <mat-form-field appearance="outline" class="name">
+          <mat-label>NAME</mat-label>
+          <input matInput type="text" formControlName="name">
+        </mat-form-field>
+      <br>
+        <mat-form-field appearance="outline" class="mail">
+          <mat-label>EMAIL</mat-label>
+          <input matInput type="email" formControlName="email">
+        </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline" style="width: 40%;">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline" style="width: 40%;">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" formControlName="confirmPassword">
+      </mat-form-field>
+      <br>
+      <mat-label style="margin-left: -30%;">Select Gender</mat-label>
+     <br> 
+     <div style="margin-left: -30%;">
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="1">Male</mat-radio-button><br>
+        <mat-radio-button value="2">Female</mat-radio-button><br>
+        <mat-radio-button value="3">Others</mat-radio-button><br>
+      </mat-radio-group>
+    </div>
+      <br>
+      <button mat-button type="submit" [disabled]="!userLogin.valid" style="background-color: rgb(245, 245, 163);">SUBMIT</button>
+      <button mat-button type="reset" style="background-color: rgb(200, 236, 236); margin: 4%;">CANCEL</button>
+      
+      
+      
+</form>
+</mat-card> 

@@ -1,0 +1,42 @@
+<table mat-table [dataSource]="data" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="ACCOUNT NO">
+      <th mat-header-cell *matHeaderCellDef>ACCOUNT NO</th>
+      <td mat-cell *matCellDef="let element"> {{element.accountNo}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="DATE">
+      <th mat-header-cell *matHeaderCellDef>DATE</th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="TRASACTION DETAILS">
+      <th mat-header-cell *matHeaderCellDef>TRASACTION DETAILS</th>
+      <td mat-cell *matCellDef="let element"> {{element.transactionDetails}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Withdrawl Atm">
+      <th mat-header-cell *matHeaderCellDef> Withdrawl Atm </th>
+      <td mat-cell *matCellDef="let element"> {{element.withdrawlAtm}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Deposit Atm">
+        <th mat-header-cell *matHeaderCellDef> Deposit Atm </th>
+        <td mat-cell *matCellDef="let element"> {{element.depositAtm}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Balance Atm">
+        <th mat-header-cell *matHeaderCellDef> Balance Atm </th>
+        <td mat-cell *matCellDef="let element"> {{element.balanceAtm}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
